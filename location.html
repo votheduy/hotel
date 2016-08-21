@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from html.9team.co/me/mem/Duynvt_hotel/location.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Aug 2016 16:06:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- <div id="village-loading" class="site-loading__background ">
+            <div class="site-loading__spinner"></div>
+        </div> -->
+        <!--Loadding-->
+
+        <div class="moblie-navigation"><div class="menu-button"><i class="icon-menu"></i></div></div>
+        <!--Mobile button-->
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="relative scrollbar-custom-1 w_100 h_100">
+                <div class="sidebar-nav">
+                    <h1><a href="home.html"><img  class="center-block" src="images/logo.png" alt="THE METROPOLITAN"></a></h1>
+                    <ul class="nav">
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="about_us_1.html">ABOUT US</a></li>
+                        <li><a href="services.html">FACILITIES & SERVICES</a></li>
+                        <li><a href="floor.html">FLOORS</a></li>
+                        <li><a href="tenants.html">TENANTS</a></li>
+                        <li class="active"><a href="location.html">LOCATION</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                    <ul class="list-social list-inline text-center">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                    </ul>
+                    <p class="mt_30 ml_10 fontS_13 text-copy">© 2016, SaiGon Metropolitan limited.  All rights reserved</p>
+                </div>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="relative scrollbar-custom-1" id="page-location" style="width:100%;min-height:100%;">
+
+
+
+                <div id="map" class="w_100 " style="height:100vh;"></div>
+
+                <div class="slide-gmap">
+                    <div class="relative">
+                        <ul class="slide-thumb-gmap">
+                            <li><a href="#" class="map-select map-default" mapNum="1"><img class="img-responsive center-block" src="images/location_slide_1.jpg" alt=""/></a></li>
+                            <li><a href="#" class="map-select map-default" mapNum="2"><img class="img-responsive center-block" src="images/location_slide_2.jpg" alt=""/></a></li>
+                            <li><a href="#" class="map-select map-default" mapNum="3"><img class="img-responsive center-block" src="images/location_slide_3.jpg" alt=""/></a></li>
+                            <li><a href="#" class="map-select map-default" mapNum="4"><img class="img-responsive center-block" src="images/location_slide_4.jpg" alt=""/></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="page_home_btn_1 animated pulse infinite">
+                    <a href="contact.html"><img class="img-responsive center-block" src="images/page_location_btn_1.png" alt=""></a>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- <table>
+        <tr>
+            <td>
+                <img src="./images/vector_map.png" alt="" />
+            </td>
+            <td>
+                <h4>sdấd</h4>
+                páđâsđá
+            </td>
+        </tr>
+    </table> -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery_1.12.4.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="fancybox/jquery.fancybox.pack.js"></script>
+    <script src="js/common.js"></script>
+
+
+    <script type="text/javascript">
+
+
+    var map;
+    var Markers = {};
+    var infowindow;
+    var locations = [
+        [
+            './images/location_thumb_1.png',
+            '<div id="iw-container"><div class="iw-content"><img class="img" src="images/location_slide_1.jpg"><table><tr><td width="40" class="text-center"><img src="./images/vector_map.png" alt="" /></td><td><h4 style="margin-bottom:0px;">THE METROLITAN TOWER</h4><p>235 Đồng Khởi, Quận 1, Hồ Chí Minh, Việt Nam</p></td></tr></table></div></div>',
+            10.7784162,
+            106.699957,
+            0
+        ],
+        [
+            './images/location_thumb_2.png',
+            '<div id="iw-container"><div class="iw-content"><img class="img" src="images/location_slide_2.jpg"><table><tr><td width="40" class="text-center"><img src="./images/vector_map.png" alt="" /></td><td><h4 style="margin-bottom:0px;">NHÀ THỜ ĐỨC BÀ</h4><p>235 Đồng Khởi, Quận 1, Hồ Chí Minh, Việt Nam</p></td></tr></table></div></div>',
+            10.77978061473084,
+            106.69899765417563,
+            1
+        ],
+        [
+            './images/location_thumb_3.png',
+            '<div id="iw-container"><div class="iw-content"><img class="img" src="images/location_slide_3.jpg"><table><tr><td width="40" class="text-center"><img src="./images/vector_map.png" alt="" /></td><td><h4 style="margin-bottom:0px;">BƯU ĐIỆN THÀNH PHỐ</h4><p>235 Đồng Khởi, Quận 1, Hồ Chí Minh, Việt Nam</p></td></tr></table></div></div>',
+            10.779831994826372,
+            106.69990960524069,
+            1
+        ],
+        [
+            './images/location_thumb_4.png',
+            '<div id="iw-container"><div class="iw-content"><img class="img" src="images/location_slide_4.jpg"><table><tr><td width="40" class="text-center"><img src="./images/vector_map.png" alt="" /></td><td><h4 style="margin-bottom:0px;">DINH ĐỘC LẬP</h4><p>235 Đồng Khởi, Quận 1, Hồ Chí Minh, Việt Nam</p></td></tr></table></div></div>',
+            10.777107951723016,
+            106.69550777731547,
+            1
+        ]
+    ];
+
+     var styleArray = [
+         {"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}
+      ];
+
+    function initMap() {
+
+
+
+        var mapOptions = {
+            zoom: 18,
+            //styles: styleArray,
+            center: new google.maps.LatLng(locations[0][2],locations[0][3])
+        };
+
+
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        infowindow = new google.maps.InfoWindow({
+            content: locations[0][1],
+        });
+
+
+        google.maps.event.addListener(infowindow, 'domready', function() {
+            // Reference to the DIV that wraps the bottom of infowindow
+            var iwOuter = $('.gm-style-iw');
+            var iwBackground = iwOuter.prev();
+            // Removes background shadow DIV
+            iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+            // Removes white background DIV
+            iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+            // Moves the infowindow 115px to the right.
+            iwOuter.parent().parent().css({left: '115px'});
+            // Moves the shadow of the arrow 76px to the left margin.
+            iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
+            // Moves the arrow 76px to the left margin.
+            iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
+            // Changes the desired tail shadow color.
+            iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1'});
+            // Reference to the div that groups the close button elements.
+            var iwCloseBtn = iwOuter.next();
+            // Apply the desired effect to the close button
+            iwCloseBtn.css({opacity: '1', right: '114px', top: '10px', border: '7px solid #48b5e9', 'border-radius': '13px', 'box-shadow': '0 0 5px #3990B9','display':'none'});
+            // If the content of infowindow not exceed the set maximum height, then the gradient is removed.
+            if($('.iw-content').height() < 140){
+                $('.iw-bottom-gradient').css({display: 'none'});
+            }
+            // The API automatically applies 0.7 opacity to the button after the mouseout event. This function reverses this event to the desired value.
+            iwCloseBtn.mouseout(function(){
+                $(this).css({opacity: '1'});
+            });
+        });
+
+        for (i = 0; i < locations.length; i++) {
+
+            var image = {
+              url:locations[i][0],
+              size: new google.maps.Size(50, 50),
+              anchor: new google.maps.Point(25, 15)
+            };
+
+             marker = new google.maps.Marker({
+                 position: new google.maps.LatLng(locations[i][2], locations[i][3]),
+                 icon:image,
+                 animation: google.maps.Animation.DROP,
+                 map: map
+             });
+         }
+
+        var marker1 = new google.maps.Marker({
+            position: {lat: 12.824806, lng: 106.630932},
+        });
+
+        var popDefault = $('.map-default').attr("mapPop")
+        map.panTo({lat:locations[0][2], lng:locations[0][3]});
+        infowindow.setContent(locations[0][1]);
+        infowindow.open(map,marker1);
+        infowindow.setPosition({lat:locations[0][2], lng:locations[0][3]});
+
+        $(".map-select").click(function(){
+            var mapNumber = $(this).attr("mapNum");
+            var mapPop = $(this).attr("mapPop");
+            map.panTo({lat:locations[mapNumber-1][2], lng:locations[mapNumber-1][3]});
+            infowindow.setContent(locations[mapNumber-1][1]);
+            infowindow.open(map,marker1);
+            infowindow.setPosition({lat:locations[mapNumber-1][2], lng:locations[mapNumber-1][3]});
+            return false;
+        });
+
+        function locate(marker_id) {
+            var myMarker = Markers[marker_id];
+            var markerPosition = myMarker.getPosition();
+            map.setCenter(markerPosition);
+            google.maps.event.trigger(myMarker, 'click');
+        }
+
+    }
+
+     </script>
+
+
+
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArtT_FEJXiG9UCjTkMphhH8GWNCA4aR1Q&amp;callback=initMap"></script>
+</body>
+
+
+<!-- Mirrored from html.9team.co/me/mem/Duynvt_hotel/location.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Aug 2016 16:06:26 GMT -->
+</html>
